@@ -1,6 +1,8 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
+    IS_DEBUG: bool
+    LOG_LEVEL: str
     #Параметры подключения к базе данных
     DB_HOST: str
     DB_PORT: int
