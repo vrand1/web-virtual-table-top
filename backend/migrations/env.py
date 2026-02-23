@@ -1,4 +1,5 @@
 import sys
+import alembic_postgresql_enum  # noqa: F401
 from logging.config import fileConfig
 from pathlib import Path
 from alembic import context
@@ -8,7 +9,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from src.config import settings
 from src.database import Base 
-from src.modules.users.models import User
+from src.modules.users.models import User  # noqa: F401
+from src.modules.character.models import Player, Character  # noqa: F401
 
 config = context.config
 
